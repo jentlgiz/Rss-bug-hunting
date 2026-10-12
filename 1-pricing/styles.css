@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -45,7 +46,7 @@ body {
 .plan {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 0;
+  border-radius: 12px;
   padding: 32px 24px;
   width: 280px;
   text-align: center;
@@ -67,7 +68,7 @@ body {
 .price {
   font-size: 40px;
   font-weight: 700;
-  color: rgb(8, 12, 23);
+  color: #0f172a;
   margin-bottom: 20px;
 }
 
@@ -104,3 +105,4 @@ body {
   font-weight: 600;
   margin-top: auto;
 }
+
