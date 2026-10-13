@@ -42,8 +42,20 @@ function clearCompleted() {
 }
 
 function getVisibleTasks() {
+  if (currentFilter === "active") {
+    return tasks.filter((t) => !t.done);
+  }
+
+  if (currentFilter === "done") {
+    return tasks.filter((t) => t.done);
+  }
+
   return tasks;
 }
+
+// all — вернуть все задачи
+// active — вернуть только невыполненные
+// done — вернуть только выполненные
 
 function updateCounter() {
   const activeCount = tasks.filter((t) => !t.done).length;
