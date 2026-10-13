@@ -64,6 +64,13 @@ function updateCounter() {
 
 function render() {
   const visible = getVisibleTasks();
+  list.replaceChildren();
+  // убираем старые элементы перед повторным отображением
+
+  visible.forEach((task) => {
+const li = document.createElement("li");
+li.className = "task";
+
   for (let i = 0; i < visible.length; i++) {
     const task = visible[i];
     const li = document.createElement("li");
@@ -86,6 +93,7 @@ function render() {
     li.appendChild(del);
     list.appendChild(li);
   }
+  });
   updateCounter();
 }
 
