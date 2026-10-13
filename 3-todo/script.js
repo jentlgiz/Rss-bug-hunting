@@ -12,7 +12,7 @@ let nextId = 1;
 
 function addTask() {
   const text = input.value.trim();
-  
+
 if (!text) {
   errorEl.hidden = false;
   return;
@@ -50,7 +50,7 @@ function updateCounter() {
 
 function render() {
   const visible = getVisibleTasks();
-  for (let i = 1; i <= visible.length; i++) {
+  for (let i = 0; i < visible.length; i++) {
     const task = visible[i];
     const li = document.createElement("li");
     li.className = "task";
